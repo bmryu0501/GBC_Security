@@ -1,9 +1,10 @@
 # CVE-2019-11510
 
 ## 개요
-[CVE-2019-11510](https://nvd.nist.gov/vuln/detail/CVE-2019-11510)는 임의 파일 노출 취약성으로, 2019년 4월 초 상용 VPN solution으로 쓰이는 Pulse Connect Secure(PCS)에서 Orange Tsai와 Meh Chang에 의해 발견되었다.
+[CVE-2019-11510](https://nvd.nist.gov/vuln/detail/CVE-2019-11510)는 상용 VPN solution으로 쓰이는 Pulse Connect Secure(PCS)에서 발견된 임의 파일 노출 취약성이다.  
+2019년 4월 초 Las Vegaas에서 열린 *Black Hat*과 *DEF CON* 회의에서 이 주제에 대한 세부사항을 공유한 [*DEVCORE*](https://devco.re/en/) 연구팀의 Orange Tsai와 Meh Chang에 의해 발견되었다.
 
-이 결함을 통해 인증되지 않은 해커가 configuration settings와 같은 **중요한 정보**를 포함하여 취약한 장치에서 발견된 모든 파일의 내용을 읽을 수 있다.
+**CVE-2019-11510**는 보고된 가장 심각한 문제 중 하나로, 이 결함을 통해 인증되지 않은 해커가 취약한 장치에서 발견된  configuration settings와 같은 중요한 정보를 포함한 **모든 파일**의 내용을 읽을 수 있다는 것이다.
 
 
 ## 분석
@@ -126,10 +127,9 @@ CVE-2019-11510([Plugin ID 127897](https://www.tenable.com/plugins/nessus/127897)
 
 ## 요약
 
-- 2019년 4월 초CVE-2019-11510 취약점 발견
-- 공격 패턴: 취약 시스템 스캔 -> Pulse Secure VPN의 시스템 패스워드와, FortiGate VPN 세션 파일을 탈취 -> 성공시 해커는 장치의 인증을 통과하거나 실제 VPN 세션으로 위장할 수 있음
-- 현재 취약 버전 업데이트를 통해 대응 가능
+- 2019년 4월 초 PCS에서 취약점 발견
+- CVE-2019-11510 이 가장 중요한 주요 취약점
+- 공격 패턴: 취약 시스템 스캔 -> Pulse Secure VPN의 시스템 패스워드 파일을 탈취 -> 성공시 해커는 장치의 인증을 통과하거나 실제 VPN 세션으로 위장할 수 있음
+- 현재 취약 버전 업데이트를 통해 대응 가능  
 
-
-## 참고자료
 출처 : https://www.tenable.com/blog/cve-2019-11510-proof-of-concept-available-for-arbitrary-file-disclosure-in-pulse-connect-secure

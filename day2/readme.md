@@ -65,6 +65,7 @@ system call 표를 참고하면 %rax == 1일 때 다음과 같다.
 | %rax | System Call | %rdi | $rsi | %rdx |
 |:---:|:---:|:---:|:---:|:---:|
 | 1 | sys_write | unsigned int fd | const char *buf | size_t count|  
+
 위의 표에 넣어준 값들을 대입해보면  
 표준출력으로 message부터 13만큼 sys_write를 실행한다는 뜻이 된다.  
 이 때 message는 .data section에 message branch가 있으므로, 해당 branch의 시작지점인 'H'의 위치이다.
@@ -81,6 +82,7 @@ system call 표를 참고하면 %rax == 1일 때 다음과 같다.
 | %rax | System Call | %rdi | $rsi | %rdx |
 |:---:|:---:|:---:|:---:|:---:|
 | 60 | sys_exit | int error_code | | |  
+
 따라서 0을 error_code로 가지며 프로그램을 종료하게 된다.
 
 ---

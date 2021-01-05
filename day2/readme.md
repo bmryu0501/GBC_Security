@@ -156,8 +156,10 @@ strlen가 호출되어 strlen branch로 왔다.
 je는 jump if equal로 flag가 0이므로 jump 하지 않는다.  
 |register| %rdi | %rax |%al|
 |:------:|:----:|:----:|:-:|
-| value  | &msg |   0  |   |
-inc는 increase로 %rdi와 %rax를 1씩 더해준다.
+| value  | &msg |   0  |   |  
+
+inc는 increase로 %rdi와 %rax를 1씩 더해준다.  
+
 |register| %rdi     | %rax |%al|
 |:------:|:--------:|:----:|:-:|
 | value  | &msg + 1 |  1   |   |

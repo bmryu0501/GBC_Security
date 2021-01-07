@@ -8,7 +8,7 @@
 ## gdb 디버깅
 
 ### main
-gdb로 실행하여 main부터 시작해보면
+gdb로 실행하여 main부터 시작해보면  
 ![print1](image/4-1printf1.JPG)  
 ![print2](image/4-2printf2.JPG)  
 위처럼 두번의 printf가 나오고, 더 내려가보면  
@@ -19,7 +19,7 @@ scanf가 나온다.
 위처럼 check함수가 나오고, 아래는 더이상 실행할 것이 없는 것으로 보아 check 함수 내부에서 비밀번호를 check하는 것 같아 <code> si </code> 명령어로 내부로 들어가본다.  
 
 ### check
-check함수에서 들어가 코드를 실행하다보면
+check함수에서 들어가 코드를 실행하다보면  
 ![strlen](image/4-5strlen.JPG)  
 위처럼 strlen함수가 나오는데, 여러번 시도 결과 입력한 password의 길이를 %eax에 return하는 것을 알아낼 수 있다.  
 ![strlenCmp](image/4-5-1strlenCmp.JPG)  

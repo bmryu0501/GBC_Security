@@ -8,7 +8,7 @@
 ### main
 ![print1](image/5-1.JPG)
 ![print2](image/5-2.JPG)  
-![scanf](image/5-3.JPG)
+![scanf](image/5-3.JPG)  
 crackme0x04와 마찬가지로 두번의 print 이후 입력을 받는다.  
 ![check](image/5-4check.JPG)  
 내려가보면 check가 있고, 이 내부에서 password를 확인한다.

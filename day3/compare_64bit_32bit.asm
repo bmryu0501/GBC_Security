@@ -1,6 +1,5 @@
-global _start
-
 section .text
+global _start
 
 print:
     mov     rax, 1
@@ -9,7 +8,7 @@ print:
     ret
 
 exit:
-    mov     rax 60
+    mov     rax, 60
     xor     rdi, rdi
     syscall
 
@@ -24,40 +23,28 @@ strlen:
 .end:
     ret
 
-_strat:
+Newline:
+    mov rsi, newline
+    mov rdx, 1
+    call print
+
+_start:
+    ; print rsp16
     mov     rsi, rsp16
     mov     rdx, 10
     call print
-
+    ; get length of argv[1]
     mov     rdi, [rsp+16]
     call strlen
-
+    ; print argv[1]
     mov     rsi, [rsp+16]
     mov     rdx, rax
     call print
+    ; print LF
+    call Newline
 
-    mov     rsi, esp16
-    mov     rdx, 10
-    call print
-
-    mov     rdi, [esp+16]
-    call strlen
-
-    mov     rsi, [esp+16]
-    mov     rdx, rax
-    call print
-
-    mov     rsi, newline
-    mov     rdx, 1
-    call print
-
-
-
-
-
-
+    call exit
 
 section .data
     rsp16: db "[rsp+16] ", 0
-    esp16: db "[esp+16] ", 0
     newline: db 10

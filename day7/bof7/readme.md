@@ -27,7 +27,7 @@ gdb를 이용해 buf와 return address가 저장된 곳의 거리를 구해보�
 ![buf address](06rdi.JPG)  
 buf의 주소는 아래에서 <code>strcpy(buf, arg)</code>에서 <code>buf</code>의 주소를 사용하므로, 이 때 $rdi를 보면 알 수 있다.  
 
-3. buf - innocent 사이의 거리  
+3. buf - return 사이의 거리  
 ![distance](07distance.JPG)  
 둘의 차이를 계산해보면 136byte 차이가 난다.
 

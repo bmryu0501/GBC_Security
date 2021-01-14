@@ -52,7 +52,7 @@ libc 라이브러리에는 실행권한이 있으니 libc의 <code>system</code>
 <code>system</code> 함수는 <code>$rdi</code>의 값을 argument로 받는다. 그렇다면 <code>$rdi</code>에 <code>"/bin/sh"</code>을 넣으면 되는데, 이 과정은 libc에서 <code>pop rdi ; ret</code> 명령이 기계어로 저장되어 있는 부분을 실행하고 pop할 곳을 <code>"/bin/sh"</code>의 주소로 넣어주면 <code>$rdi</code>에 들어갈 것이다.  
 ![find gadget](image/11gadget.JPG)  
 libc는 위에서 찾은 것처럼 <code>/tmp/2.23/lib/libc.so.6</code>에 있고, 가젯을 찾는 <code>ROPgadget.py</code> 프로그램을 이용해 <code>pop rdi ; ret</code>의 가젯의 주소를 찾았다. 위의 것들 중 정확하게 일치하는 <code>0x21102</code>일 것이다. 이는 libc.so.6에서의 offset 주소이므로, libc.so.6의 주소에 해당 주소를 더해주면 실행했을 때의 주소가 나올 것이다.  
-따라서 $$0x7ffff7a0d000 + 0x21102 = 0x7ffff7a2e102$$ 이다.  
+따라서 0x7ffff7a0d000 + 0x21102 = 0x7ffff7a2e102 이다.  
 
 3. payload 구조  
 최종적으로 만든 payload의 구조는 다음과 같다.  

@@ -61,10 +61,10 @@ libc는 위에서 찾은 것처럼 <code>/tmp/2.23/lib/libc.so.6</code>에 있�
     |:---:|:---:|:---:|:---:|:---:|
     |의미| 없음 | pop rdi ; ret | "/bin/sh" | system() |
     |값|x|0x7ffff7a2e102|0x7ffff7b99d57|0x7ffff7a52390|
-    | 크기 | 18 | 8byte | 8byte | 8byte |
+    | 크기 | 16byte | 8byte | 8byte | 8byte |
 
     위처럼 해주면 <code>vuln</code>함수가 끝나 return 할 때 <code>pop rdi ; ret</code>를 실행하는 주소로 return되어 <code>pop rdi</code>와 <code>ret</code>을 실행하여 뒤에 over flow로 들어간 <code>"/bin/sh"</code>가 <code>$rdi</code>로 들어가고, <code>ret</code>에 의해 <code>system</code>이 call 되어 최종적으로 <code>system("/bin/sh")</code>이 실행된다.  
 
 ## 성공
 ![done](image/12done.JPG)  
-위처럼 
+위처럼 payload를 넘겨주어 bof10의 권한을 탈취하는데 성공했다!

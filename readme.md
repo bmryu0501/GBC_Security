@@ -1,6 +1,6 @@
 # GBC_Security
 
-본 저장소는 한동대학교 보안동아리 GHOST의 프로젝트인 GBC(GHOST Basic Course)에서 보안분야를 공부한 내용을 담고 있음 (2021.01.17 - 21.01.17)  
+본 저장소는 한동대학교 보안동아리 GHOST의 프로젝트인 GBC(GHOST Basic Course)에서 보안분야를 공부한 내용을 담고 있음 (2021.01.04 - 21.01.18)  
 [ccss17/security-tutorial](https://github.com/ccss17/security-tutorial)을 기본 배경으로 학습함
 
 ## Contents
